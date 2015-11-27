@@ -18,7 +18,7 @@ public class Find {
 	
 	private static HashMap<String, HashMap<Integer, ArrayList<Integer>>> dictionary;
 	private static HashMap<Integer, ArrayList<Integer>> wordLinesPositionsInfo;
-    private static String fileName = "/Users/FrankGiordano/Documents/workspace/FindWordPositionByHashMap/t3.txt";
+    private static String fileName = "/Users/FrankGiordano/Documents/workspace/FindWordPositionsByHashMap/t3.txt";
 	
     public static void main(String args[]) {
     
@@ -53,11 +53,11 @@ public class Find {
 	            String line = "";
 	            dictionary = new HashMap<String, HashMap<Integer, ArrayList<Integer>>>();
 
-	            // Create a reader which reads our file. In this example searchfile.txt is the file we are searching.
+	            // create a reader which reads our file. 
 	            BufferedReader bReader = new BufferedReader(new FileReader(fileName));
 
-	            // While we loop through the file, read each line until there is nothing left to read.
-	            // This assumes we have carriage returns ending each text line.
+	            // while we loop through the file, read each line until there is nothing left to read.
+	            // this assumes we have carriage returns ending each text line.
 	            while ((line = bReader.readLine()) != null) {
 
 	                 lineCount++;
@@ -94,12 +94,12 @@ public class Find {
 	                 } 
 
 	             }
-	             // Close the reader.
+	             // close the reader.
 	             bReader.close();  
 	             print(searchWord, dictionary);      
 	       }
 	       catch (IOException e) {
-	                // We encountered an error with the file, print it to the user.
+	                // we encountered an error with the file, print it to the user.
 	                System.out.println("Error: " + e.toString());
 	       }
 	}
