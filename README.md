@@ -21,5 +21,5 @@ test located at line 1, position 0
 frank located at line 1, position 5
 etc
 
-whereas entire word position would be:
+whereas all the words positions would be:
 test located at position 0 and frank located at position 1 and giordano located at position 3
