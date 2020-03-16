@@ -1,17 +1,21 @@
 # findwordpositions-hashmap
+ 
+This program implements word dictionary with positions stored. It implements something similar to the
+first half of the following link:
+ 
+http://www.ardendertat.com/2011/12/20/programming-interview-questions-23-find-word-positions-in-text/
 
-/*
- * author: Frank Giordano 10/24/2015
- * program implements word dictionary with positions stored
- * implements first half of the following link
- * http://www.ardendertat.com/2011/12/20/programming-interview-questions-23-find-word-positions-in-text/
- * this program uses java hashmap structure
- * 
- */
+and takes it a step further by asking for a word to search and word to replace each instance within a
+specified file and saves the resultant text to a new text file.
 
+The structure of the code flow is that a text file is read from the current running location and reads
+in every line and looks at each word and stores it location/position within the line.
 
-Please note this problem stores the first character position of the word within the line number.. 
-It does not store the occurence position of the entire string word.. 
+The main data structure is a HashMap that has a key of word and value of another HashMap that has key
+as line number and value as positions within that line.
+
+NOTE: This problem stores the first character position of the word within the line number.
+It does not store the occurence position of the entire string word.
 
 For instance,
 
