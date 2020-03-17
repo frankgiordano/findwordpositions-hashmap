@@ -169,9 +169,8 @@ public class FindWord {
 
         do {
             input = new byte[80];
-            System.out.println("Enter a word to search the following file for location info");
-            System.out.println(fileName);
-            System.out.print(":");
+            System.out.printf("Enter a word to search the following file %s for location info\n", fileName);
+            System.out.print("> ");
             try {
                 System.in.read(input);
             } catch (IOException e) {
@@ -181,6 +180,8 @@ public class FindWord {
             searchWord = (new String(input, 0, input.length)).trim();
             if (searchWord.length() > 0) {
                 FindWord.print(searchWord);
+            } else {
+                System.exit(0);
             }
         } while (searchWord.length() > 0);
     }
