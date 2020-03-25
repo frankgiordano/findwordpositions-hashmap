@@ -24,3 +24,15 @@ etc
 
 whereas all the words positions would be:
 test located at position 0 and frank located at position 1 and giordano located at position 3
+
+## Setup, Installation, and running the application:
+
+1 - Install Java 8
+
+2 - Install Maven 3.6.3 or higher
+
+At project's root directory, perform the following commands:
+
+3 - mvn clean install
+
+4 - java -jar .\target\FindWord.jar
