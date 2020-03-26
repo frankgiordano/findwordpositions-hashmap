@@ -25,7 +25,7 @@ import java.util.Map.Entry;
 public class FindWordPositions {
 
     private static HashMap<String, HashMap<Integer, ArrayList<Integer>>> dictionary;
-    private static String fileName = "t3.txt";
+    private static String fileName;
 
     public static void search(String searchWord) {
         if (dictionary != null) {  // use current cache
@@ -174,10 +174,31 @@ public class FindWordPositions {
         System.out.println(message);
     }
 
+    private static String getInputFile() {
+        byte[] input;
+        input = new byte[80];
+
+        System.out.println("Enter filename to read");
+        System.out.print("> ");
+        try {
+            System.in.read(input);
+            fileName = (new String(input, 0, input.length)).trim();
+            if (fileName.isEmpty()) {
+                System.exit(0);
+            }
+        } catch (IOException e) {
+            System.out.print("Error reading given input. Error message = " + e.getMessage());
+            System.exit(-1);
+        }
+        return fileName;
+    }
+
     public static void main(String args[]) {
 
         String searchWord = null;
         byte[] input;
+
+        String fileName = getInputFile();
 
         do {
             input = new byte[80];
