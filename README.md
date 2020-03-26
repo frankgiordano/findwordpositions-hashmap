@@ -12,7 +12,7 @@ The main data structure is a HashMap that has a key of word and value of another
 as line number and value as positions within that line.
 
 NOTE: This problem stores the first character position of the word within the line number.
-It does not store the occurence position of the entire string word.
+It does not store the occurrence position of the entire string word.
 
 For instance,
 
@@ -35,4 +35,4 @@ At project's root directory, perform the following commands:
 
 3 - mvn clean install
 
-4 - java -jar .\target\FindWord.jar
+4 - java -jar .\target\FindWordPositions.jar
